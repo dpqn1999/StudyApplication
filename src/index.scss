@@ -1,0 +1,15 @@
+.ant-layout-sider {
+  height: 100vh !important;
+  background-color: #fff !important;
+  overflow: hidden;
+  .ant-menu {
+    height: 100vh !important;
+  }
+}
+
+.ant-segmented {
+  .ant-segmented-item-selected {
+    background-color: rgb(59 130 246);
+    color: #fff;
+  }
+}
