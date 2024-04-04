@@ -40,14 +40,14 @@ const Layout = () => {
                     key: "2",
                     label: "Ôn tập câu hỏi",
                     onClick: () => {
-                      navigate("/benhhoc/review");
+                      navigate("/StudyApplication/benhhoc/review");
                     },
                   },
                   {
                     key: "3",
                     label: "Thi thử",
                     onClick: () => {
-                      navigate("/benhhoc/test");
+                      navigate("/StudyApplication/benhhoc/test");
                     },
                   },
                 ],
@@ -76,8 +76,14 @@ const Layout = () => {
           >
             <Routes>
               <Route path="/" element={<></>} />
-              <Route path="/benhhoc/review" element={<Test />} />
-              <Route path="/benhhoc/test" element={<TestPage />} />
+              <Route
+                path="/StudyApplication/benhhoc/review"
+                element={<Test />}
+              />
+              <Route
+                path="/StudyApplication/benhhoc/test"
+                element={<TestPage />}
+              />
             </Routes>
           </Content>
         </AntdLAyout>

@@ -32,16 +32,17 @@ const QuestionCard = (props: IProps) => {
   useEffect(() => {
     isSubmit && setIsAnswerVisible(true);
   }, [isSubmit]);
+
   return (
     <div>
       <Card
         bordered
-        className={` bg-white rounded-md border-gray-200  border dark:border-gray-700 ${
+        className={`  rounded-md border-gray-200  border dark:border-gray-700 ${
           isAnswerVisible && isSubmit
-            ? selectedAnswer === correctAnswer
-              ? "bg-emerald-100"
-              : "bg-red-100"
-            : "hover:bg-gray-100"
+            ? selectedAnswer !== correctAnswer || selectedAnswer === ""
+              ? " bg-red-100"
+              : " bg-emerald-100"
+            : " hover:bg-gray-100 bg-white"
         }`}
       >
         <div className="p-2">
